@@ -139,7 +139,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Letter.cpp" />
+    <ClCompile Include="Overnight.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Postcard.cpp" />
+    <ClCompile Include="ParcelDriver.cpp" />
+    <ClCompile Include="Parcel.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Overnight.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Postcard.h" />
+    <ClInclude Include="Letter.h" />
+    <ClInclude Include="Parcel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Text.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
